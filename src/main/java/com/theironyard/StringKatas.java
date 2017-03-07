@@ -33,11 +33,15 @@ public class StringKatas {
      *
      * Note: You will need to use string concatenation to solve this problem.
      *
-     * @param name The name you are greeting EG: "Bob"
+     * //@param name The name you are greeting EG: "Bob"
      * @return A string greeting the name. EG: "Hello Bob!"
      */
     // todo: implement helloName() method
+    public static String helloName(String name){
+        String message = "Hello "+ name+ "!";
 
+        return message;
+    }
     /**
      * Create a publicly accessible static method that does the following:
      *
@@ -57,11 +61,15 @@ public class StringKatas {
      * the documentation as it relates to inclusiveness.
      *
      * @param out A four-letter string such as "[[]]"
-     * @param word A word to place in the middle of the value of the `out` argument
+     * //@param word A word to place in the middle of the value of the `out` argument
      * @return A string with the word `word` placed in the middle of the `out` argument
      */
     // todo: implement makeOutWord() method
+    public static String makeOutWord(String out, String userWord){
+      String word = out.substring(0,2)+userWord+out.substring(2,4);
+      return word;
 
+    }
     /**
      * Create a publicly accessible static method that does the following:
      *
@@ -74,11 +82,14 @@ public class StringKatas {
      *
      * This exercise is on CodingBat at http://codingbat.com/prob/p172267
      *
-     * @param str The string to return the first half of.
-     * @return The first half of the string provided
+     * //@param str The string to return the first half of.
+     * //@return The first half of the string provided
      */
     // todo: implement firstHalf() method
-
+    public static String firstHalf(String userWord){
+        String word = userWord.substring(0,(userWord.length()/2));
+        return word;
+    }
     /**
      * Create a publicly accessible static method that does the following:
      *
@@ -100,10 +111,19 @@ public class StringKatas {
      * actually received. You can use this to check incremental progress towards
      * a solution.
      *
-     * @param str The string to extract the first/last characters from
-     * @param n The number of characters to extract.
-     * @return A string made up of the first n and last n characters of `str` concatenated together
+     * //@param str The string to extract the first/last characters from
+     * //@param n The number of characters to extract.
+     * //@return A string made up of the first n and last n characters of `str` concatenated together
      */
     // todo: implement nTwice() method
+    public static String nTwice(String userWord, int n){
+
+        String first_half_word = userWord.substring(0, n);
+
+        String second_half_word = userWord.substring(userWord.length()-n,userWord.length());
+
+        String word = first_half_word + second_half_word;
+        return word;
+    }
 
 }
